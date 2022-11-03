@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="535.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tiendademascotas.FXMLNuevaVentanaController">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="563.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Registro Dueños">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="371.0" prefWidth="602.0">
+                     <children>
+                        <TextField fx:id="nombreDueño" layoutX="14.0" layoutY="40.0" onKeyTyped="#SoloLetras" prefHeight="25.0" prefWidth="121.0" />
+                        <Label layoutX="14.0" layoutY="14.0" text="Nombre" />
+                        <Label layoutX="153.0" layoutY="14.0" text="Edad" />
+                        <Label layoutX="291.0" layoutY="14.0" text="Telefono" />
+                        <Label layoutX="428.0" layoutY="14.0" text="Nombre de la moscota" />
+                        <TextField fx:id="EdadDueño" layoutX="153.0" layoutY="40.0" onKeyTyped="#SoloNumeros" prefHeight="25.0" prefWidth="121.0" />
+                        <TextField fx:id="Telefono" layoutX="291.0" layoutY="40.0" onKeyTyped="#SoloNumeros" prefHeight="25.0" prefWidth="121.0" />
+                        <TextField fx:id="NomMascota" layoutX="429.0" layoutY="40.0" onKeyTyped="#SoloLetras" prefHeight="25.0" prefWidth="121.0" />
+                        <Button layoutX="89.0" layoutY="82.0" mnemonicParsing="false" onAction="#RegistroDueño" text="Registrar" />
+                        <Button layoutX="184.0" layoutY="82.0" mnemonicParsing="false" onAction="#EliminarDueño" text="Eliminar" />
+                        <Button layoutX="274.0" layoutY="82.0" mnemonicParsing="false" onAction="#ModificarDueño" text="Modificar" />
+                        <Button layoutX="379.0" layoutY="82.0" mnemonicParsing="false" onAction="#ConsultarDueño" text="Consultar" />
+                        <TableView fx:id="TablaDueño" layoutX="53.0" layoutY="133.0" prefHeight="200.0" prefWidth="482.0">
+                          <columns>
+                            <TableColumn fx:id="idDueñoCol" prefWidth="75.0" text="Id" />
+                            <TableColumn fx:id="NombreDueñoCol" prefWidth="75.0" text="Nombre" />
+                              <TableColumn fx:id="TelefonoCol" prefWidth="75.0" text="Telefono" />
+                              <TableColumn fx:id="EdadDueñoCol" prefWidth="83.0" text="Edad" />
+                              <TableColumn fx:id="NomMascotaCol" prefWidth="141.0" text="Nombre de la moscota" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Registro Mascotas">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="24.0" text="Nombre" />
+                        <Label layoutX="140.0" layoutY="24.0" text="Edad" />
+                        <Label layoutX="280.0" layoutY="24.0" text="Color" />
+                        <Label layoutX="154.0" layoutY="82.0" text="Sexo" />
+                        <Label layoutX="400.0" layoutY="23.0" text="Nombre del dueño" />
+                        <TextField fx:id="NombreMascota" layoutX="14.0" layoutY="49.0" prefHeight="25.0" prefWidth="121.0" />
+                        <TextField fx:id="EdadMascota" layoutX="140.0" layoutY="49.0" prefWidth="121.0" />
+                        <TextField fx:id="ColorMascota" layoutX="267.0" layoutY="49.0" prefWidth="121.0" />
+                        <TextField fx:id="NomDueño" layoutX="400.0" layoutY="49.0" prefWidth="121.0" />
+                        <RadioButton fx:id="Macho" layoutX="192.0" layoutY="82.0" mnemonicParsing="false" text="Macho">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="Sexo" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="Hembra" layoutX="269.0" layoutY="82.0" mnemonicParsing="false" text="Hembra" toggleGroup="$Sexo" />
+                        <Button layoutX="110.0" layoutY="107.0" mnemonicParsing="false" onAction="#RegistroMascota" text="Registrar" />
+                        <Button layoutX="191.0" layoutY="107.0" mnemonicParsing="false" onAction="#EliminarMascota" text="Eliminar" />
+                        <Button layoutX="268.0" layoutY="107.0" mnemonicParsing="false" onAction="#ModificarMascota" text="Modificar" />
+                        <Button layoutX="355.0" layoutY="107.0" mnemonicParsing="false" onAction="#ConsultarMascota" text="Consultar" />
+                        <TableView fx:id="TablaMascota" layoutX="41.0" layoutY="144.0" prefHeight="200.0" prefWidth="482.0">
+                          <columns>
+                            <TableColumn fx:id="IdMascotaCol" prefWidth="75.0" text="Id" />
+                            <TableColumn fx:id="NombreMascotaCol" prefWidth="75.0" text="Nombre" />
+                              <TableColumn fx:id="EdadMascotaCol" prefWidth="75.0" text="Edad" />
+                              <TableColumn fx:id="ColorMascotaCol" prefWidth="75.0" text="Color" />
+                              <TableColumn fx:id="NomDueñoCol" prefWidth="115.0" text="Nombre del dueño" />
+                              <TableColumn fx:id="SexoCol" prefWidth="66.0" text="Sexo" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

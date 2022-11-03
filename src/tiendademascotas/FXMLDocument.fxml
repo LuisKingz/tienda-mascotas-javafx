@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="216.0" prefWidth="269.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="tiendademascotas.FXMLDocumentController">
+   <children>
+      <Label layoutX="70.0" layoutY="14.0" text="Bienvenido">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="79.0" text="Usuario" />
+      <Label layoutX="18.0" layoutY="132.0" text="Contraseña" />
+      <TextField fx:id="usuario" layoutX="86.0" layoutY="75.0" />
+      <PasswordField fx:id="psw" layoutX="86.0" layoutY="128.0" />
+      <Button layoutX="111.0" layoutY="171.0" mnemonicParsing="false" onAction="#Login" text="Enviar" />
+   </children>
+</AnchorPane>

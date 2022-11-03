@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="tiendaDeMascotas.jnlp">
+  <information>
+    <title>tiendaDeMascotas</title>
+    <vendor>lfern</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="tiendaDeMascotas.jar" size="9607" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="tiendaDeMascotas" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="tiendademascotas.TiendaDeMascotas"  name="tiendaDeMascotas" />
+  <update check="always"/>
+</jnlp>
